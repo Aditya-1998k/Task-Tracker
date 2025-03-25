@@ -1,0 +1,12 @@
+# Ignore the virtual environment folder
+backend/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment-related files
+.env
+*.env
