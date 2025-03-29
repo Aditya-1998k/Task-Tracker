@@ -1,6 +1,8 @@
 ## Project Description
 The **Task Tracker Backend** is a RESTful API built using **Flask** to manage tasks efficiently. It provides user authentication, task creation, updates, and tracking functionalities. Designed for scalability, supports integration with **SQL/NoSQL databases**.
 
+Deployment URL : https://task-tracker-backend-66gi.onrender.com/
+
 ### Key Features  
 ✅ **User authentication & authorization (JWT-based)**  
 ✅ **CRUD operations for tasks** (Create, Read, Update, Delete)  
