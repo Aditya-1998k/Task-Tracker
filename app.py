@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify
 from flask_pymongo import PyMongo
 from config import Config
 from flask_cors import CORS
