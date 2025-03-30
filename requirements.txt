@@ -2,3 +2,5 @@ flask
 Flask-PyMongo
 python-dotenv
 gunicorn
+flask-cors
+bson
