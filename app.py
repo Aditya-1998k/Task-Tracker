@@ -2,15 +2,21 @@ from flask import Flask, jsonify
 from flask_pymongo import PyMongo
 from config import Config
 from flask_cors import CORS
+
+
 app = Flask(__name__)
 app.config.from_object(Config)
-
 CORS(app)
-
 mongo = PyMongo(app)
 
-from tasks.routes import task_blueprint
+## Import templates
+from templates.tasks.routes import task_blueprint
+from templates.users.routes import user_blueprint
+
+## Register Blueprint
 app.register_blueprint(task_blueprint, url_prefix="/tasks")
+app.register_blueprint(user_blueprint, url_prefix="/users")
+
 
 @app.route("/", methods=["GET"])
 def welcome():
