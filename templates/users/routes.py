@@ -10,11 +10,11 @@ def login():
     if not data:
         return jsonify({"message": "No input data provided"}), 400
 
-    users = get_users_session(data)
-    if users:
-        return jsonify({"message": "LogedIn successfully", "users": users}), 200
+    token = get_users_session(data)
+    if token:
+        return jsonify({"token": token}), 200
     else:
-        return jsonify({"message": "Login failed"}), 401
+        return jsonify({"Error": "Login failed"}), 401
 
 
 @user_blueprint.route('/signup', methods=['POST'])
@@ -25,6 +25,6 @@ def signup():
     users = add_user(data)
 
     if users:
-        return jsonify({"message": "User signup successsfully","users": users}), 201
+        return jsonify({"message": "User signup successsfully"}), 201
     else:
         return jsonify({"message": "Signup failed"}), 400

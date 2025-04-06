@@ -2,9 +2,11 @@ from flask import Flask, jsonify
 from flask_pymongo import PyMongo
 from config import Config
 from flask_cors import CORS
+from templates.auths.middleware import auth_middleware
 
 
 app = Flask(__name__)
+auth_middleware(app)
 app.config.from_object(Config)
 CORS(app)
 mongo = PyMongo(app)

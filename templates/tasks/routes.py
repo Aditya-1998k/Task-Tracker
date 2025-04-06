@@ -14,7 +14,7 @@ task_blueprint = Blueprint('task', __name__)
 def add_task_route():
     return add_task(request.json)
 
-@task_blueprint.route('/tasks', methods=['GET'])
+@task_blueprint.route('/get_tasks', methods=['GET'])
 def get_tasks_route():
     return get_tasks()
 

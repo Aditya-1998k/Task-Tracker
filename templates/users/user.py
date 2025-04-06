@@ -1,6 +1,8 @@
 from .model import user_collection
 from .model import Users
+from templates.auths.auth import generate_token
 import bcrypt
+from flask import jsonify
 
 
 def get_users_session(data):
@@ -9,7 +11,8 @@ def get_users_session(data):
     user_data = user_collection.find_one({"email": email})
 
     if bcrypt.checkpw(password.encode('utf-8'), user_data['password']):
-        return user_data
+        token = generate_token(user_data)
+        return token
 
 
 def add_user(data):
