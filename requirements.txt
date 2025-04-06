@@ -3,3 +3,5 @@ Flask-PyMongo
 python-dotenv
 gunicorn
 flask-cors
+bcrypt
+PyJWT

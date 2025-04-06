@@ -14,4 +14,3 @@ class Config:
     MONGO_DB = os.getenv("MONGO_DB", "task_tracker_db")
 
     MONGO_URI = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{MONGO_CLUSTER}/{MONGO_DB}?retryWrites=true&w=majority"
-
