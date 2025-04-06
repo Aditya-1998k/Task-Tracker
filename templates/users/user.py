@@ -1,8 +1,8 @@
+import bcrypt
 from .model import user_collection
 from .model import Users
 from templates.auths.auth import generate_token
-import bcrypt
-from flask import jsonify
+
 
 
 def get_users_session(data):
@@ -32,3 +32,16 @@ def add_user(data):
     )
     user_collection.insert_one(user.to_dict())
     return user.to_dict()
+
+
+def get_all_users_data():
+    result = []
+    users = list(user_collection.find({}))
+    for user in users:
+        result.append({
+            "username": user.get("username"),
+            "email": user.get("email"),
+            "role": user.get("role"),
+            "status": user.get("status")
+        })
+    return result

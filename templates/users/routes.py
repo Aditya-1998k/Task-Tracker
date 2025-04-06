@@ -1,8 +1,11 @@
 from flask import Blueprint, request
 from flask import jsonify
-from .user import get_users_session, add_user
+from .user import get_users_session, add_user, get_all_users_data
+from templates.auths.auth import role_required
+
 
 user_blueprint = Blueprint('user', __name__)
+
 
 @user_blueprint.route('/login', methods=['POST'])
 def login():
@@ -28,3 +31,14 @@ def signup():
         return jsonify({"message": "User signup successsfully"}), 201
     else:
         return jsonify({"message": "Signup failed"}), 400
+
+
+
+@user_blueprint.route('/get_users', methods=['GET'])
+@role_required(['admin'])
+def get_all_users():
+    users = get_all_users_data()
+    if users:
+        return jsonify({"users": users}), 200
+    else:
+        return jsonify({"message": "No users found"}), 404
