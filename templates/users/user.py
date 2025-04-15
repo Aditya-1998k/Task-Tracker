@@ -2,7 +2,8 @@ import bcrypt
 from .model import user_collection
 from .model import Users
 from templates.auths.auth import generate_token
-
+from flask import jsonify
+from flask import jsonify
 
 
 def get_users_session(data):
@@ -21,17 +22,17 @@ def add_user(data):
     
     user_data = user_collection.find_one({"email": data['email']})
     if user_data:
-        return "user already Exists"
+        return jsonify({"error": "user already Exists"}), 400
 
     user = Users(
         username=data['username'],
         password=data['password'],
         email=data['email'],
         role=data.get('role', 'user'),
-        status=data.get('status', 'active')
+        status=data.get('status', 'Y')
     )
     user_collection.insert_one(user.to_dict())
-    return user.to_dict()
+    return jsonify({"message": "User added successfully"}), 201
 
 
 def get_all_users_data():

@@ -26,11 +26,7 @@ def signup():
     if not data:
         return jsonify({"message": "No input data provided"}), 400
     users = add_user(data)
-
-    if users:
-        return jsonify({"message": "User signup successsfully"}), 201
-    else:
-        return jsonify({"message": "Signup failed"}), 400
+    return users
 
 
 
