@@ -18,7 +18,6 @@ def add_task_route():
 
 
 @task_blueprint.route('/get_tasks', methods=['GET'])
-@role_required(['admin', 'developer'])
 def get_tasks_route():
     return get_tasks()
 
