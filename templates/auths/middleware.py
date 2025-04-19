@@ -13,6 +13,8 @@ AUTH_ENABLED = os.getenv('AUTH_ENABLED')
 def auth_middleware(app):
     @app.before_request
     def before_request():
+        if request.method == 'OPTIONS':
+            return '', 200
         if not AUTH_ENABLED:
             return None
         
