@@ -8,6 +8,8 @@ PUBLIC_ENDPOINTS = {
     'user.signup'
 }
 
+CACHE = {}
+
 AUTH_ENABLED = os.getenv('AUTH_ENABLED')
 
 def auth_middleware(app):
@@ -20,7 +22,6 @@ def auth_middleware(app):
         
         if request.endpoint in PUBLIC_ENDPOINTS:
             return None
-        
         token = request.headers.get('Authorization')
         if not token:
             return jsonify({"error": "Token is missing"}), 401
@@ -29,5 +30,6 @@ def auth_middleware(app):
             payload = verify_token(token)
             request.email = payload.get('email')
             request.role = payload.get('role')
+            CACHE[token] = payload
         except Exception as e:
             return jsonify({"error": str(e)}), 401

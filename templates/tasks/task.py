@@ -9,9 +9,9 @@ def add_task(data):
     
     task = Task(
         summary=data["summary"],
-        task_type=data.get("task_type", "task"),
+        task_type=data.get("task_type", "Development"),
         start_dt=data.get("start_dt"),
-        status=data.get("status", "pending"),
+        status=data.get("status", "open"),
         estimate=data.get("estimate", 8),
         priority=data.get("priority", "medium"),
         assigned=data.get("assigned"),
@@ -20,7 +20,7 @@ def add_task(data):
     )
 
     task_id = tasks_collection.insert_one(task.to_dict()).inserted_id
-    return jsonify({"message": "Task added", "task_id": str(task_id)})
+    return jsonify({"message": "Task added", "task_id": str(task_id)}), 200
 
 
 def get_tasks():
