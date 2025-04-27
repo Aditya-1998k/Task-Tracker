@@ -46,3 +46,27 @@ def get_all_users_data():
             "status": user.get("status")
         })
     return result
+
+def get_user_data(email):
+    user = user_collection.find_one({"email": email})
+    if user:
+        return {
+            "username": user.get("username"),
+            "email": user.get("email"),
+            "role": user.get("role"),
+            "status": user.get("status")
+        }
+    else:
+        return None
+
+def change_user_password(email, old_password, new_password):
+    user = user_collection.find_one({"email": email})
+    if user:
+        if bcrypt.checkpw(old_password.encode('utf-8'), user['password']):
+            user_collection.update_one(
+                {"email": email},
+                {"$set": {"password": bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())}}
+            )
+            return jsonify({"message": "Password changed successfully"}), 200
+    else:
+        return jsonify({"error": "Invalid credentials"}), 401

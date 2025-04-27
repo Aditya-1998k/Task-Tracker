@@ -6,7 +6,7 @@ tasks_collection = mongo.db.tasks
 
 class Task:
     """ Task Model for MongoDB """
-    def __init__(self, summary, task_type='Development', start_dt=None, status="pending", estimate=8, priority="medium", assigned=None, description=None, due_date=None):
+    def __init__(self, summary, task_type, status, estimate, priority, assigned, description, start_dt=None, due_date=None):
         self.summary = summary
         self.task_type = task_type
         self.start_dt = start_dt
