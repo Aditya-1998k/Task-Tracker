@@ -36,3 +36,18 @@ flask run --host=0.0.0.0 --port=5001 --reload
 ```
 deactivate
 ```
+
+
+##  Endpoints Overview
+
+| Endpoint                   | Method | Description                                      |
+|----------------------------|--------|--------------------------------------------------|
+| `/register`                | POST   | Register a new user                             |
+| `/login`                   | POST   | Authenticate and obtain a JWT token             |
+| `/tasks`                   | GET    | Get all tasks for the authenticated user         |
+| `/tasks`                   | POST   | Create a new task                                |
+| `/tasks/<task_id>`         | PUT    | Update a specific task                           |
+| `/tasks/<task_id>`         | DELETE | Delete a specific task                           |
+| `/tasks/<task_id>/status`  | PATCH  | Update a task’s status or deadline               |
+
+
