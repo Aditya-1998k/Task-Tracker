@@ -12,7 +12,7 @@ task_blueprint = Blueprint('task', __name__)
 
 
 @task_blueprint.route('/add_task', methods=['POST'])
-# @role_required(['admin', 'developer'])
+@role_required(['admin'])
 def add_task_route():
     return add_task(request.json)
 
@@ -23,7 +23,6 @@ def get_tasks_route():
 
 
 @task_blueprint.route('/get_task', methods=['GET'])
-@role_required(['admin', 'developer'])
 def get_task_ids():
     data = request.get_json()
     task_id = data.get('_id')
