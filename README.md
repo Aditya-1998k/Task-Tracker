@@ -1,7 +1,7 @@
 ## Project Description
 The **Task Tracker Backend** is a RESTful API built using **Flask** to manage tasks efficiently. It provides user authentication, task creation, updates, and tracking functionalities. Designed for scalability, supports integration with **SQL/NoSQL databases**.
 
-Deployment URL : https://task-tracker-backend-66gi.onrender.com/
+Deployment URL : https://task-tracker-backend-yv45.onrender.com
 
 ### Key Features  
 ✅ **User authentication & authorization (JWT-based)**  
@@ -27,12 +27,23 @@ source backend/bin/activate
 ```
 pip install -r requirements.txt
 ```
-3. Run the flask App
+3. create .env file and place following details
+```
+MONGO_USER="dummyuser"
+MONGO_PASSWORD="dummypassword"
+MONGO_CLUSTER="dummy-tracker-abcd.mongodb.net"
+MONGO_DB="task-tracker"
+SECRET_KEY="alpha"
+ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES="10"
+AUTH_ENABLE=True
+```
+4. Run the flask App
 ```
 flask run --host=0.0.0.0 --port=5001 --reload
 ```
-4. Stop the server (CLTRL + C)
-5. Deactivate the virtual environment
+5. Stop the server (CLTRL + C)
+6. Deactivate the virtual environment
 ```
 deactivate
 ```
@@ -50,4 +61,54 @@ deactivate
 | `/tasks/<task_id>`         | DELETE | Delete a specific task                           |
 | `/tasks/<task_id>/status`  | PATCH  | Update a task’s status or deadline               |
 
+## Example (user template):
+1. Signup:
+- url: http://127.0.0.1:5001/users/signup
+- payload:
+```python
+{
+    "username" : "gaditya",
+    "password" : "test@123",
+    "email" : "gaditya@example.com",
+    "role" : "admin"
+}
+```
+- Response:
+```
+{
+    "message": "User added successfully"
+}
+```
+2. Login
+- url: http://127.0.0.1:5001/users/login
+- payload:
+```
+{
+    "password" : "test@123",
+    "email" : "gaditya@example.com"
+}
+```
+- Response:
+```
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.-hPQzFHxw"
+}
+```
+3. get_users
+- url: http://127.0.0.1:5001/users/get_users
+- Authorization: Bearer Token (Pass the generated token)
+
+response:
+```
+{
+    "users": [
+        {
+            "username": "gaditya",
+            "email": "gaditya@example.com",
+            "role": "admin",
+            "status": "Y"
+        }
+    ]
+}
+```
 

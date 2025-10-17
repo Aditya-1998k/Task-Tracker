@@ -22,7 +22,7 @@ app.register_blueprint(user_blueprint, url_prefix="/users")
 
 @app.route("/", methods=["GET"])
 def welcome():
-    return jsonify({"message": "Welcome to the Task Manager API!"})
+    return jsonify({"message": "Welcome to the Task Tracker !"})
 
 
 if __name__ == "__main__":
