@@ -10,6 +10,15 @@ user_blueprint = Blueprint('user', __name__)
 
 @user_blueprint.route('/login', methods=['POST'])
 def login():
+    """
+    Payload:
+        {
+            "password": "S3cureP@ssw0rd",
+            "email": "alice@example.com"
+        }
+    returns:
+        Generated Tokens
+    """
     data = request.get_json()
     if not data:
         return jsonify({"message": "No input data provided"}), 400
@@ -23,6 +32,17 @@ def login():
 
 @user_blueprint.route('/signup', methods=['POST'])
 def signup():
+    """
+    Arguments:
+    {
+        username : username,
+        password : password,
+        email : email.
+        role : (developer or admin or user),
+        status : optional ('Y')
+    }
+    Return: User Data
+    """
     data = request.get_json()
     if not data:
         return jsonify({"message": "No input data provided"}), 400
@@ -41,7 +61,11 @@ def get_all_users():
         return jsonify({"message": "No users found"}), 404
 
 @user_blueprint.route('/get_user', methods=['GET'])
+@role_required(['admin'])
 def get_user():
+    """
+    payload : {"email": "example@gmail.com"}
+    """
     token = request.headers.get('Authorization')
     if not token:
         return jsonify({"error": "Token is missing"}), 401
@@ -51,6 +75,14 @@ def get_user():
 
 @user_blueprint.route('/change_password', methods=['POST'])
 def change_password():
+    """
+    Payload:
+    {
+        "email": "test@gmail.com",
+        "old_password": "secret_old",
+        "new_password": "secret_new"
+    }
+    """
     data = request.get_json()
     token = request.headers.get('Authorization')
     if not data and not token:
@@ -60,3 +92,4 @@ def change_password():
     old_password = data.get('oldPassword')
     new_password = data.get('newPassword')
     return change_user_password(email, old_password, new_password)
+
