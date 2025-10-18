@@ -103,6 +103,8 @@ deactivate
 3. **get_users**
 - url: http://127.0.0.1:5001/users/get_users
 - Authorization: Bearer Token (Pass the generated token)
+<img width="951" height="533" alt="image" src="https://github.com/user-attachments/assets/b50f3189-42f6-4cfd-9d10-065abc4c3662" />
+
 
 response:
 ```python
