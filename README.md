@@ -7,17 +7,18 @@ Deployment URL : https://task-tracker-backend-yv45.onrender.com
 ✅ **User authentication & authorization (JWT-based)**  
 ✅ **CRUD operations for tasks** (Create, Read, Update, Delete)  
 ✅ **Task status updates & deadlines tracking**  
-✅ **Database support** (PostgreSQL/MongoDB)  
-✅ **Asynchronous task processing** using Celery & RabbitMQ (optional)  
-✅ **Dockerized for easy deployment**  
+✅ **Database support** (MongoDB)
+✅ **Asynchronous task processing** using RabbitMQ
+✅ **Dockerized for easy deployment**
+✅ **Logging for Debugging** using python logging module (file and console logging)
 
 ### Tech Stack  
-- **Backend:** Flask, Flask-RESTful, SQLAlchemy  
-- **Database:** PostgreSQL / MongoDB  
-- **Authentication:** JWT  
+- **Backend:** Flask
+- **Database:** MongoDB, Memcached
+- **Authentication:** JWT
 - **Containerization:** Docker  
 
-### Steps to Start the APP
+### Steps to Start the APP (Without Docker)
 1. create a virtual Environment
 ```
 python3 -m venv backend
@@ -48,21 +49,26 @@ flask run --host=0.0.0.0 --port=5001 --reload
 deactivate
 ```
 
+### Setup Application with Docker
+1. Clone the Repo
+2. Update the `.env` file with required details
+3. Run the command: `docker-compose up --build`
+4. From next time run the command: `docker compose up` or `docker compose up -d` in detach mode.
 
 ##  Endpoints Overview
 
 | Endpoint                   | Method | Description                                      |
 |----------------------------|--------|--------------------------------------------------|
-| `/register`                | POST   | Register a new user                             |
-| `/login`                   | POST   | Authenticate and obtain a JWT token             |
-| `/tasks`                   | GET    | Get all tasks for the authenticated user         |
+| `users/signup              | POST   | Register a new user                              |
+| `users/login`              | POST   | Authenticate and obtain a JWT token              |
+| `users/get_users`          | GET    | Get all users for the authenticated user(admin)  |
 | `/tasks`                   | POST   | Create a new task                                |
 | `/tasks/<task_id>`         | PUT    | Update a specific task                           |
 | `/tasks/<task_id>`         | DELETE | Delete a specific task                           |
 | `/tasks/<task_id>/status`  | PATCH  | Update a task’s status or deadline               |
 
 ## Example (user template):
-1. Signup:
+1. **Signup:**
 - url: http://127.0.0.1:5001/users/signup
 - payload:
 ```python
@@ -74,32 +80,32 @@ deactivate
 }
 ```
 - Response:
-```
+```python
 {
     "message": "User added successfully"
 }
 ```
-2. Login
+2. **Login**
 - url: http://127.0.0.1:5001/users/login
 - payload:
-```
+```python
 {
     "password" : "test@123",
     "email" : "gaditya@example.com"
 }
 ```
 - Response:
-```
+```python
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.-hPQzFHxw"
 }
 ```
-3. get_users
+3. **get_users**
 - url: http://127.0.0.1:5001/users/get_users
 - Authorization: Bearer Token (Pass the generated token)
 
 response:
-```
+```python
 {
     "users": [
         {
