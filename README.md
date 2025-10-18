@@ -7,13 +7,10 @@ Deployment URL : https://task-tracker-backend-yv45.onrender.com
 ✅ **User authentication & authorization (JWT-based)**  
 ✅ **CRUD operations for tasks** (Create, Read, Update, Delete)  
 ✅ **Task status updates & deadlines tracking**  
-✅ **Database support** (MongoDB)
-
-✅ **Asynchronous task processing** using RabbitMQ
-
-✅ **Dockerized for easy deployment**
-
-✅ **Logging for Debugging** using python logging module (file and console logging)
+✅ **Database support** (MongoDB)    
+✅ **Asynchronous task processing** using RabbitMQ    
+✅ **Dockerized for easy deployment**    
+✅ **Logging for Debugging** using python logging module (file and console logging)    
 
 ### Tech Stack  
 - **Backend:** Flask
