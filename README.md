@@ -8,7 +8,8 @@ Deployment URL : https://task-tracker-backend-yv45.onrender.com
 ✅ **CRUD operations for tasks** (Create, Read, Update, Delete)  
 ✅ **Task status updates & deadlines tracking**  
 ✅ **Database support** (MongoDB)    
-✅ **Asynchronous task processing** using RabbitMQ    
+✅ **Asynchronous task processing** using RabbitMQ
+✅ **Memcache for user session management**
 ✅ **Dockerized for easy deployment**    
 ✅ **Logging for Debugging** using python logging module (file and console logging)    
 
@@ -48,12 +49,20 @@ flask run --host=0.0.0.0 --port=5001 --reload
 ```
 deactivate
 ```
+Note: Please setup rabbitmq and Memcached and add details in .env or use docker way of installation.
+
 
 ### Setup Application with Docker
 1. Clone the Repo
 2. Update the `.env` file with required details
 3. Run the command: `docker-compose up --build`
 4. From next time run the command: `docker compose up` or `docker compose up -d` in detach mode.
+
+
+### Rabbitmq
+<img width="1358" height="537" alt="image" src="https://github.com/user-attachments/assets/35a20306-9c15-43bc-a0c1-9c6632e75a84" />
+
+TODO: Setup a service to consume message from welcome queue and send welcome letter to user.
 
 ##  Endpoints Overview
 
