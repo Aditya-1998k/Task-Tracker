@@ -1,0 +1,4 @@
+2025-10-18 18:12:45 [INFO] utilities.rmq_utils: Message published to queue: welcome
+2025-10-18 18:18:56 [INFO] utilities.rmq_utils: Message published to queue: welcome
+2025-10-19 07:52:18 [INFO] utilities.rmq_utils: Message published to queue: welcome
+2025-10-19 07:57:16 [INFO] utilities.rmq_utils: Message published to queue: welcome

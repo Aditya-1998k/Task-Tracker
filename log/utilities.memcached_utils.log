@@ -1,0 +1,236 @@
+2025-10-19 07:53:57 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+2025-10-19 07:53:57 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:54:02 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+2025-10-19 07:54:02 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:57:05 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+2025-10-19 07:57:05 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:57:12 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2h1NEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzYwODYxMDE1fQ.IIOZ6tjsq3WDNtX2uc1FsH06SwTogcFqy7sxLx1kHG0'
+2025-10-19 07:57:12 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:57:46 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:57:46 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:57:51 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:57:51 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:58:26 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:58:26 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:58:31 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:58:31 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 07:58:31 [INFO] utilities.memcached_utils: Failed to get cache for key Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8. Error : Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:58:31 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 07:59:34 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 07:59:34 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:03:58 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 08:03:58 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:05:12 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 08:05:12 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:05:55 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8 in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxMjQ3fQ.9EwKCoG09QE0a8W9w3Z6kjbH0cEkBmE0grQI5pvc9v8'
+2025-10-19 08:05:55 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:10:37 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM'
+2025-10-19 08:10:37 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:10:37 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:11:03 [ERROR] utilities.memcached_utils: Error while adding Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM in memcache. Error Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM'
+Traceback (most recent call last):
+  File "/app/utilities/memcached_utils.py", line 21, in set_cache
+    client.set(key, value, expire)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 475, in set
+    return self._store_cmd(b"set", {key: value}, expire, noreply, flags=flags)[key]
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 1195, in _store_cmd
+    key = self.check_key(key, self.key_prefix)
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 373, in check_key
+    return check_key_helper(
+  File "/usr/local/lib/python3.10/site-packages/pymemcache/client/base.py", line 120, in check_key_helper
+    raise MemcacheIllegalInputError("Key contains whitespace: %r" % key)
+pymemcache.exceptions.MemcacheIllegalInputError: Key contains whitespace: b'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM'
+2025-10-19 08:11:03 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:11:03 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:13:40 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM added in Memcache
+2025-10-19 08:13:40 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:13:40 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:14:41 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM added in Memcache
+2025-10-19 08:14:41 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:14:41 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:15:21 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM added in Memcache
+2025-10-19 08:15:21 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:15:21 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:18:04 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYxODk2fQ.lkPeadZvnqPWEWntDOBjTC5BsQPxYTzfvc2AO33isoM added in Memcache
+2025-10-19 08:18:04 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:19:54 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYyNTYyfQ.TuaSwzH_8ZBD5Rqxz4ANUBDmO0qOx1ynCQUeyygZLN8 added in Memcache
+2025-10-19 08:19:54 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:19:54 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:24:05 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYyNTYyfQ.TuaSwzH_8ZBD5Rqxz4ANUBDmO0qOx1ynCQUeyygZLN8 added in Memcache
+2025-10-19 08:24:05 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:24:05 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:26:01 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYyNTYyfQ.TuaSwzH_8ZBD5Rqxz4ANUBDmO0qOx1ynCQUeyygZLN8 added in Memcache
+2025-10-19 08:26:01 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:26:01 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:26:47 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYyNTYyfQ.TuaSwzH_8ZBD5Rqxz4ANUBDmO0qOx1ynCQUeyygZLN8 added in Memcache
+2025-10-19 08:26:47 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:26:47 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:33:54 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNDE0fQ.92EHKjXJ8p4bel4ElMrlL-TFUSH-wlT-GPkWeLoquZ4 added in Memcache
+2025-10-19 08:33:54 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:33:58 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNDE0fQ.92EHKjXJ8p4bel4ElMrlL-TFUSH-wlT-GPkWeLoquZ4 added in Memcache
+2025-10-19 08:33:58 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:33:58 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-19 08:35:13 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNDE0fQ.92EHKjXJ8p4bel4ElMrlL-TFUSH-wlT-GPkWeLoquZ4 added in Memcache
+2025-10-19 08:35:13 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:35:49 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNTE4fQ.WPHJdApXO-lvhT3hJkmumi4O8cnl1fhsFlbguPUV6xU added in Memcache
+2025-10-19 08:35:49 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:35:52 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNTE4fQ.WPHJdApXO-lvhT3hJkmumi4O8cnl1fhsFlbguPUV6xU added in Memcache
+2025-10-19 08:35:52 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-19 08:40:30 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdhZGl0eWFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzYwODYzNTE4fQ.WPHJdApXO-lvhT3hJkmumi4O8cnl1fhsFlbguPUV6xU added in Memcache
+2025-10-19 08:40:30 [INFO] utilities.memcached_utils: Closing Memcache Connection.

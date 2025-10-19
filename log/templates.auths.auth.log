@@ -1,0 +1,100 @@
+2025-10-19 07:52:24 [INFO] templates.auths.auth: Token Generated successfully for user vishu4@example.com
+2025-10-19 07:52:57 [ERROR] templates.auths.auth: Invalid Token, Error: Signature verification failed
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 220, in decode_complete
+    self._verify_signature(signing_input, header, signature, key, algorithms)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
+    raise InvalidSignatureError("Signature verification failed")
+jwt.exceptions.InvalidSignatureError: Signature verification failed
+2025-10-19 07:53:21 [ERROR] templates.auths.auth: Invalid Token, Error: Signature verification failed
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 220, in decode_complete
+    self._verify_signature(signing_input, header, signature, key, algorithms)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
+    raise InvalidSignatureError("Signature verification failed")
+jwt.exceptions.InvalidSignatureError: Signature verification failed
+2025-10-19 07:53:35 [INFO] templates.auths.auth: Token Generated successfully for user vishu4@example.com
+2025-10-19 07:54:02 [INFO] templates.auths.auth: This request required ['admin'], but user have user
+2025-10-19 07:57:05 [INFO] templates.auths.auth: This request required ['admin'], but user have user
+2025-10-19 07:57:27 [INFO] templates.auths.auth: Token Generated successfully for user gaditya@gmail.com
+2025-10-19 08:07:49 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 08:08:16 [INFO] templates.auths.auth: Token Generated successfully for user gaditya@gmail.com
+2025-10-19 08:18:59 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 08:19:22 [INFO] templates.auths.auth: Token Generated successfully for user gaditya@gmail.com
+2025-10-19 08:33:04 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 08:33:34 [INFO] templates.auths.auth: Token Generated successfully for user gaditya@gmail.com
+2025-10-19 08:35:18 [INFO] templates.auths.auth: Token Generated successfully for user gaditya@gmail.com
+2025-10-19 08:36:08 [ERROR] templates.auths.auth: Invalid Token, Error: Signature verification failed
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 220, in decode_complete
+    self._verify_signature(signing_input, header, signature, key, algorithms)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
+    raise InvalidSignatureError("Signature verification failed")
+jwt.exceptions.InvalidSignatureError: Signature verification failed
+2025-10-19 08:40:20 [ERROR] templates.auths.auth: Invalid Token, Error: Signature verification failed
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 220, in decode_complete
+    self._verify_signature(signing_input, header, signature, key, algorithms)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
+    raise InvalidSignatureError("Signature verification failed")
+jwt.exceptions.InvalidSignatureError: Signature verification failed

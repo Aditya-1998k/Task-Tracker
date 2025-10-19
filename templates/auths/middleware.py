@@ -1,12 +1,13 @@
 import os
 from flask import request, jsonify
 from .auth import verify_token
+from utilities.memcached_utils import set_cache
 
 # Route That don't require Auth
 PUBLIC_ENDPOINTS = {"user.login", "user.signup", "welcome"}
 
-CACHE = {}
 
+expire_time = os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES")
 AUTH_ENABLED = os.getenv("AUTH_ENABLED")
 
 
@@ -26,8 +27,10 @@ def auth_middleware(app):
 
         try:
             payload = verify_token(token)
+            if not payload:
+                return jsonify({"Error": "Invalid Token"})
             request.email = payload.get("email")
             request.role = payload.get("role")
-            CACHE[token] = payload
+            set_cache(token, payload, int(expire_time) * 60)
         except Exception as e:
             return jsonify({"error": str(e)}), 401

@@ -5,3 +5,5 @@ gunicorn
 flask-cors
 bcrypt
 PyJWT
+pika==1.3.2
+pymemcache==4.0.0

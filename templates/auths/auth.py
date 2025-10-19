@@ -49,6 +49,9 @@ def verify_token(token):
     except jwt.InvalidTokenError as e:
         logger.exception(f"Invalid Token, Error: {e}")
         return None
+    except Exception as e:
+        logger.exception(f"Token verification failed. Error: {e}")
+        return None
 
 def role_required(roles):
     def decorator(func):

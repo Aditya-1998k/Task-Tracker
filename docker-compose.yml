@@ -1,10 +1,38 @@
 services:
   web:
     build: .
+    container_name: task-tracker-web
     env_file:
       - .env
     ports:
       - "5001:5001"
     volumes:
       - .:/app
+    depends_on:
+      - rabbitmq
+      - memcached
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    env_file:
+      - .env
+    ports:
+      - "5672:5672"   # AMQP
+      - "15672:15672" # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+
+  memcached:
+    image: memcached:latest
+    container_name: memcached
+    ports:
+      - "11211:11211"
+    command: memcached -m 128  # allocate 128MB memory
+
+volumes:
+  rabbitmq_data:
 
