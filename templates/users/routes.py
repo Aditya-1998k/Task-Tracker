@@ -87,18 +87,7 @@ def change_password():
     }
     """
     data = request.get_json()
-    token = request.headers.get('Authorization')
-    if not data and not token:
-        return jsonify({"message": "No input data provided"}), 400
-    if token:
-        cache_data = get_cache(token)
-        if cache_data:
-            email = cache_data.get('email')
-        else:
-            email = data.get('email')
-    else:
-        email = data.get('email')
-    print(email)
+    email = data.get('email')
     old_password = data.get('oldPassword')
     new_password = data.get('newPassword')
     return change_user_password(email, old_password, new_password)

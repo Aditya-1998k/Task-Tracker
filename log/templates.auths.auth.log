@@ -98,3 +98,170 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
     raise InvalidSignatureError("Signature verification failed")
 jwt.exceptions.InvalidSignatureError: Signature verification failed
+2025-10-19 08:47:11 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 14:39:48 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-19 14:53:47 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 14:54:30 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-19 17:24:03 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-19 17:37:50 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 44, in verify_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-19 17:38:01 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 00:34:13 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:04:20 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:07:24 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:08:25 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:12:09 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:18:37 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:34:18 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:34:18 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 01:36:58 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 01:36:58 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 01:37:10 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760924818}, cache: None
+2025-10-20 03:38:07 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 03:38:07 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 03:38:26 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932087}, cache: None
+2025-10-20 03:43:02 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 03:43:02 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 03:43:19 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932382}, cache: b"{'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': datetime.datetime(2025, 10, 20, 3, 53, 2, 892139)}"
+2025-10-20 03:43:19 [ERROR] templates.auths.auth: Token verification failed. Error: 'bytes' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 51, in verify_token
+    if cache_paylod and jwt_payload.get("username") == cache_paylod.get("username"):
+AttributeError: 'bytes' object has no attribute 'get'
+2025-10-20 03:45:22 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932382}, cache: None
+2025-10-20 03:45:28 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932382}, cache: None
+2025-10-20 03:45:59 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932382}, cache: None
+2025-10-20 03:46:06 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932382}, cache: None
+2025-10-20 03:46:17 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 03:46:17 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 03:46:25 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:48:54 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:48:57 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:48:58 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:51:33 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:51:35 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:51:40 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760932577}, cache: None
+2025-10-20 03:52:00 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 03:52:00 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 03:54:09 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 03:54:09 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 03:54:36 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-20 03:54:47 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-20 03:55:00 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 49, in verify_token
+    jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-20 03:55:24 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-20 03:55:40 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 49, in verify_token
+    jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-20 04:02:41 [ERROR] templates.auths.auth: Error while token verification, Error: Signature has expired
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 49, in verify_token
+    jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 167, in decode_complete
+    self._validate_claims(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 262, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 363, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+2025-10-20 04:02:53 [ERROR] templates.auths.auth: Invalid Token, Error: Invalid header padding
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 275, in _load
+    header_data = base64url_decode(header_segment)
+  File "/usr/local/lib/python3.10/site-packages/jwt/utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+  File "/usr/local/lib/python3.10/base64.py", line 133, in urlsafe_b64decode
+    return b64decode(s)
+  File "/usr/local/lib/python3.10/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 49, in verify_token
+    jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 209, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 277, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+2025-10-20 04:03:21 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 04:03:21 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-20 04:03:35 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-20 04:03:50 [ERROR] templates.auths.auth: Invalid Token, Error: Signature verification failed
+Traceback (most recent call last):
+  File "/app/templates/auths/auth.py", line 49, in verify_token
+    jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 222, in decode
+    decoded = self.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jwt.py", line 156, in decode_complete
+    decoded = api_jws.decode_complete(
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 220, in decode_complete
+    self._verify_signature(signing_input, header, signature, key, algorithms)
+  File "/usr/local/lib/python3.10/site-packages/jwt/api_jws.py", line 328, in _verify_signature
+    raise InvalidSignatureError("Signature verification failed")
+jwt.exceptions.InvalidSignatureError: Signature verification failed
+2025-10-20 04:03:54 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}

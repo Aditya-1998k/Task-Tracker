@@ -1,5 +1,6 @@
 import os
-import base64
+import hashlib
+import json
 from pymemcache.client.base import Client
 from utilities.logging_config import get_logger
 
@@ -19,8 +20,8 @@ def create_connection():
 def set_cache(key, value, expire=600):
     try:
         client = create_connection()
-        safe_key = base64.urlsafe_b64encode(key.encode()).decode()
-        client.set(safe_key, value, expire)
+        safe_key = hashlib.sha256(key.encode()).hexdigest()
+        client.set(safe_key, json.dumps(value), expire)
         logger.info(f"{key} added in Memcache")
     except Exception as e:
         logger.exception(f"Error while adding {key} in memcache. Error {e}")
@@ -32,10 +33,24 @@ def set_cache(key, value, expire=600):
 def get_cache(key):
     try:
         client = create_connection()
-        safe_key = base64.urlsafe_b64encode(key.encode()).decode()
-        client.get(safe_key)
+        safe_key = hashlib.sha256(key.encode()).hexdigest()
+        data = client.get(safe_key)
+        return json.loads(data.decode())
     except Exception as e:
         logger.info(f"Failed to get cache for key {key}. Error : {e}")
+    finally:
+        client.close()
+        logger.info("Closing Memcache connection.")
+
+
+def clear_cache(key):
+    try:
+        client = create_connection()
+        safe_key = hashlib.sha256(key.encode()).hexdigest()
+        client.delete(safe_key)
+        logger.info("Cache cleared from memcache.")
+    except Exception as e:
+        logger.exception(f"Failed to clear cache. Error : {e}")
     finally:
         client.close()
         logger.info("Closing Memcache connection.")

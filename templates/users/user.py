@@ -88,5 +88,7 @@ def change_user_password(email, old_password, new_password):
                 },
             )
             return jsonify({"message": "Password changed successfully"}), 200
+        else:
+            return jsonify({"Error": "Please provide valid old password"})
     else:
         return jsonify({"error": "Invalid credentials"}), 401

@@ -1,0 +1,9 @@
+2025-10-20 01:10:27 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'exp': 1760923105}
+2025-10-20 01:11:54 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'exp': 1760923105}
+2025-10-20 01:12:17 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760923329}
+2025-10-20 01:19:09 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760923717}
+2025-10-20 03:54:36 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}
+2025-10-20 03:54:47 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}
+2025-10-20 03:55:24 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933049}
+2025-10-20 04:03:35 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}
+2025-10-20 04:03:54 [INFO] templates.auths.middleware: Debugging: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}

@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 from flask import jsonify, request
 
 # Local Imports
+from utilities.memcached_utils import get_cache, set_cache, clear_cache
 from utilities.logging_config import get_logger
 
 logger = get_logger(__name__)
@@ -24,10 +25,14 @@ def generate_token(data):
         payload = {
             "email": data.get('email'),
             "role": data.get('role'),
+            "username": data.get('username'),
             "exp": datetime.utcnow() + timedelta(minutes=int(ACCESS_TOKEN_EXPIRE_MINUTES))
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
         logger.info(f"Token Generated successfully for user {data.get('email')}")
+        del payload['exp']
+        set_cache(token, payload)
+        logger.info("Token Data added in memcache.")
         return token
     except Exception as e:
         logger.exception(f"Failed to Generate token, Error:{e}")
@@ -41,10 +46,14 @@ def verify_token(token):
     try:
         if token.startswith("Bearer "):
             token = token.split(" ")[1]
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        return payload
+        jwt_payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        cache_paylod = get_cache(token)
+        logger.info(f"Payload Debugging: jwt: {jwt_payload}, cache: {cache_paylod}")
+        if cache_paylod and jwt_payload.get("username") == cache_paylod.get("username"):
+            return jwt_payload
     except jwt.ExpiredSignatureError as e:
         logger.exception(f"Error while token verification, Error: {e}")
+        clear_cache(token)
         return None
     except jwt.InvalidTokenError as e:
         logger.exception(f"Invalid Token, Error: {e}")
@@ -63,3 +72,4 @@ def role_required(roles):
             return func(*args, **kwargs)
         return wrapper
     return decorator
+

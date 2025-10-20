@@ -1,6 +1,9 @@
 from flask import jsonify
 from bson import ObjectId
 from .model import Task, tasks_collection
+from utilities.logging_config import get_logger
+
+logger = get_logger(__name__)
 
 
 def add_task(data):
@@ -18,9 +21,11 @@ def add_task(data):
         description=data.get("description"),
         due_date=data.get("due_date")
     )
-
-    task_id = tasks_collection.insert_one(task.to_dict()).inserted_id
-    return jsonify({"message": "Task added", "task_id": str(task_id)}), 200
+    try:
+        task_id = tasks_collection.insert_one(task.to_dict()).inserted_id
+        return jsonify({"message": "Task added", "task_id": str(task_id)}), 200
+    except Exception as e:
+        return jsonify({"Error": f"Error while adding tasks. error: {e}"})
 
 
 def get_tasks():
@@ -31,11 +36,13 @@ def get_tasks():
     return jsonify({"tasks": tasks})
 
 
-def get_task_with_id(task_id):
+def get_task_by_user(username):
     """Fetch task with task id"""
-    task = tasks_collection.find_one({"_id": ObjectId(task_id)})
-    if task:
-        task["_id"] = str(task["_id"])
-        return jsonify({"task": task})
+    tasks = list(tasks_collection.find({"assigned": username}))
+    if tasks:
+        for task in tasks:
+            task["_id"] = str(task["_id"])
+        return jsonify({"tasks": tasks})
     else:
         return jsonify({"error": "Task not found"}), 404
+

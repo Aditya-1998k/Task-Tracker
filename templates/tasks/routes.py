@@ -5,9 +5,14 @@ Adding All the routes for Tasks
 3. Get all tasks
 """
 from flask import Blueprint, request
-from .task import get_tasks, add_task, get_task_with_id
-from templates.auths.auth import role_required
 
+from .task import get_tasks, add_task, get_task_by_user
+from templates.auths.auth import role_required
+from utilities.memcached_utils import get_cache
+from utilities.logging_config import get_logger
+
+
+logger = get_logger(__name__)
 task_blueprint = Blueprint('task', __name__)
 
 
@@ -22,8 +27,8 @@ def get_tasks_route():
     return get_tasks()
 
 
-@task_blueprint.route('/get_task', methods=['GET'])
-def get_task_ids():
-    data = request.get_json()
-    task_id = data.get('_id')
-    return get_task_with_id(task_id)
+@task_blueprint.route('/get_my_task', methods=['GET'])
+def get_user_tasks():
+    username = request.username
+    return get_task_by_user(username)
+
