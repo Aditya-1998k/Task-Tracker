@@ -1,7 +1,7 @@
 ## Project Description
-The **Task Tracker Backend** is a RESTful API built using **Flask** to manage tasks efficiently. It provides user authentication, task creation, updates, and tracking functionalities. Designed for scalability, supports integration with **SQL/NoSQL databases**.
-
-Deployment URL : https://task-tracker-backend-yv45.onrender.com
+The Task Tracker Backend is a scalable RESTful API built with Flask to efficiently manage users and tasks.
+It provides secure authentication, task management, and real-time integration with RabbitMQ and Memcached for asynchronous messaging and caching.
+The application is fully Dockerized, supports MongoDB, and implements robust logging for observability and debugging.
 
 ### Key Features  
 ✅ **User authentication & authorization (JWT-based)**  
@@ -12,6 +12,7 @@ Deployment URL : https://task-tracker-backend-yv45.onrender.com
 ✅ **Memcache for user session management**    
 ✅ **Dockerized for easy deployment**    
 ✅ **Logging for Debugging** using python logging module (file and console logging)    
+✅ **Integrated with SOA service (SOA_AGENT) for sending welcome letter to user post registration**
 
 ### Tech Stack  
 - **Backend:** Flask
@@ -51,6 +52,9 @@ deactivate
 ```
 Note: Please setup rabbitmq and Memcached and add details in .env or use docker way of installation.
 
+### Welcome Email
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/c680781c-1b29-495f-9d29-cf64e0b993aa" />
+
 
 ### Setup Application with Docker
 1. Clone the Repo
@@ -60,7 +64,7 @@ Note: Please setup rabbitmq and Memcached and add details in .env or use docker 
 
 
 ### Rabbitmq
-<img width="1358" height="537" alt="image" src="https://github.com/user-attachments/assets/35a20306-9c15-43bc-a0c1-9c6632e75a84" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/35a20306-9c15-43bc-a0c1-9c6632e75a84" />
 
 TODO: Setup a service to consume message from welcome queue and send welcome letter to user.
 
@@ -71,61 +75,30 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 | `users/signup              | POST   | Register a new user                              |
 | `users/login`              | POST   | Authenticate and obtain a JWT token              |
 | `users/get_users`          | GET    | Get all users for the authenticated user(admin)  |
-| `/tasks`                   | POST   | Create a new task                                |
-| `/tasks/<task_id>`         | PUT    | Update a specific task                           |
-| `/tasks/<task_id>`         | DELETE | Delete a specific task                           |
-| `/tasks/<task_id>/status`  | PATCH  | Update a task’s status or deadline               |
+| `/tasks/add_task`          | POST   | Create a new task                                |
+| `/tasks/get_tasks`         | GET    | Get all tasks                                    |
+| `/tasks/get_my_task`       | GET    | Get all the assigned task for loggedin user      |
 
 ## Example (user template):
-1. **Signup:**
-- url: http://127.0.0.1:5001/users/signup
-- payload:
-```python
-{
-    "username" : "gaditya",
-    "password" : "test@123",
-    "email" : "gaditya@example.com",
-    "role" : "admin"
-}
-```
-- Response:
-```python
-{
-    "message": "User added successfully"
-}
-```
-2. **Login**
-- url: http://127.0.0.1:5001/users/login
-- payload:
-```python
-{
-    "password" : "test@123",
-    "email" : "gaditya@example.com"
-}
-```
-- Response:
-```python
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.-hPQzFHxw"
-}
-```
-3. **get_users**
-- url: http://127.0.0.1:5001/users/get_users
-- Authorization: Bearer Token (Pass the generated token)
-<img width="951" height="533" alt="image" src="https://github.com/user-attachments/assets/b50f3189-42f6-4cfd-9d10-065abc4c3662" />
+**Signup:**
+<img width="1108" height="509" alt="image" src="https://github.com/user-attachments/assets/248e535f-88dc-4509-9b74-a344b1f76851" />
 
+**Login**
+<img width="1122" height="512" alt="image" src="https://github.com/user-attachments/assets/9784e32d-8585-4ca9-b5f9-87d1c76dbe0d" />
 
-response:
-```python
-{
-    "users": [
-        {
-            "username": "gaditya",
-            "email": "gaditya@example.com",
-            "role": "admin",
-            "status": "Y"
-        }
-    ]
-}
-```
+**get_users**
+<img width="1349" height="564" alt="image" src="https://github.com/user-attachments/assets/54d7e378-c8c1-42c8-b5dd-5fb1181c6500" />
+
+**Change Password**
+   <img width="1361" height="607" alt="image" src="https://github.com/user-attachments/assets/52fcb2e3-bc5e-4bb1-85f3-d0244541956a" />
+
+**Create Task**
+   <img width="1005" height="541" alt="image" src="https://github.com/user-attachments/assets/9cf4b9b6-2aa9-46c0-aeef-9370521e0b25" />
+   
+**Get Tasks**
+   <img width="1036" height="561" alt="image" src="https://github.com/user-attachments/assets/3ca69134-afeb-448f-b28e-bfca802f1c80" />
+   
+**Get User Assigned Task**
+   <img width="1027" height="578" alt="image" src="https://github.com/user-attachments/assets/70c18011-f2c4-4b3c-844e-015c5b3fd226" />
+
 
