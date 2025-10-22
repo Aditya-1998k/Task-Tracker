@@ -52,9 +52,6 @@ deactivate
 ```
 Note: Please setup rabbitmq and Memcached and add details in .env or use docker way of installation.
 
-### Welcome Email
-<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/c680781c-1b29-495f-9d29-cf64e0b993aa" />
-
 
 ### Setup Application with Docker
 1. Clone the Repo
@@ -64,7 +61,7 @@ Note: Please setup rabbitmq and Memcached and add details in .env or use docker 
 
 
 ### Rabbitmq
-<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/35a20306-9c15-43bc-a0c1-9c6632e75a84" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/0a83a0b4-5cb8-431f-83ae-31e738f6816e" />
 
 TODO: Setup a service to consume message from welcome queue and send welcome letter to user.
 
@@ -82,6 +79,8 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 ## Example (user template):
 **Signup:**
 <img width="1108" height="509" alt="image" src="https://github.com/user-attachments/assets/248e535f-88dc-4509-9b74-a344b1f76851" />
+
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/c680781c-1b29-495f-9d29-cf64e0b993aa" />
 
 **Login**
 <img width="1122" height="512" alt="image" src="https://github.com/user-attachments/assets/9784e32d-8585-4ca9-b5f9-87d1c76dbe0d" />
