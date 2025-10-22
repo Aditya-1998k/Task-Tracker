@@ -376,3 +376,5 @@ TypeError: Object of type datetime is not JSON serializable
 2025-10-20 04:03:54 [INFO] utilities.memcached_utils: Closing Memcache connection.
 2025-10-20 04:03:54 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYwOTMzNjAxfQ.iN4VYJ36zCN_5Cly0OhgVKb1Jt3ALfzkNrgMDdSjwXk added in Memcache
 2025-10-20 04:03:54 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-20 05:32:45 [INFO] utilities.memcached_utils: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYwOTM4OTY1fQ.2X9bQB3NtYMbiyr9_SrAkmYOsga0q98_prMQRtQwj_I added in Memcache
+2025-10-20 05:32:45 [INFO] utilities.memcached_utils: Closing Memcache Connection.

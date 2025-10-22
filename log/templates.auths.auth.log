@@ -265,3 +265,5 @@ Traceback (most recent call last):
     raise InvalidSignatureError("Signature verification failed")
 jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-20 04:03:54 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-20 05:32:45 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-20 05:32:45 [INFO] templates.auths.auth: Token Data added in memcache.
