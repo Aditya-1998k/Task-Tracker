@@ -267,3 +267,25 @@ jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-20 04:03:54 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1760933601}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
 2025-10-20 05:32:45 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
 2025-10-20 05:32:45 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:57:40 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:57:40 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:57:48 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:57:48 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:57:50 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:57:50 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:58:26 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:58:26 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:58:31 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:58:31 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:58:38 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:58:38 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 06:58:38 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 06:58:38 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 07:01:14 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 07:01:14 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 07:01:19 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 07:01:19 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 07:01:23 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 07:01:23 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-23 07:01:28 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-23 07:01:28 [INFO] templates.auths.auth: Token Data added in memcache.
