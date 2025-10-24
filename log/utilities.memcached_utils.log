@@ -400,3 +400,10 @@ TypeError: Object of type datetime is not JSON serializable
 2025-10-23 07:01:23 [INFO] utilities.memcached_utils: Closing Memcache Connection.
 2025-10-23 07:01:28 [INFO] utilities.memcached_utils: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYxMjAzNDg4fQ.7aT4_uoCqpijsvtCGumdCT99rbO4zJmlPUCuvx3gnKk added in Memcache
 2025-10-23 07:01:28 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-24 04:09:50 [INFO] utilities.memcached_utils: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYxMjc5NTkwfQ.A3JpcT0J-d3_PdgSfkTHsy-DNJBwM_plwXjAJiUFzSE added in Memcache
+2025-10-24 04:09:50 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-24 04:10:03 [INFO] utilities.memcached_utils: Closing Memcache connection.
+2025-10-24 04:10:04 [INFO] utilities.memcached_utils: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYxMjc5NTkwfQ.A3JpcT0J-d3_PdgSfkTHsy-DNJBwM_plwXjAJiUFzSE added in Memcache
+2025-10-24 04:10:04 [INFO] utilities.memcached_utils: Closing Memcache Connection.
+2025-10-24 04:22:04 [INFO] utilities.memcached_utils: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaXR5YTk4Z3VwdGFAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJnYWRpdHlhIiwiZXhwIjoxNzYxMjgwMzI0fQ.TY1IqP9ttoWSlJr-DXbI_LWXlGcQmJgFcObcdXdDiDw added in Memcache
+2025-10-24 04:22:04 [INFO] utilities.memcached_utils: Closing Memcache Connection.

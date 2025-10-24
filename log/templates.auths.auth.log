@@ -289,3 +289,8 @@ jwt.exceptions.InvalidSignatureError: Signature verification failed
 2025-10-23 07:01:23 [INFO] templates.auths.auth: Token Data added in memcache.
 2025-10-23 07:01:28 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
 2025-10-23 07:01:28 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-24 04:09:50 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-24 04:09:50 [INFO] templates.auths.auth: Token Data added in memcache.
+2025-10-24 04:10:03 [INFO] templates.auths.auth: Payload Debugging: jwt: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya', 'exp': 1761279590}, cache: {'email': 'aditya98gupta@gmail.com', 'role': 'admin', 'username': 'gaditya'}
+2025-10-24 04:22:04 [INFO] templates.auths.auth: Token Generated successfully for user aditya98gupta@gmail.com
+2025-10-24 04:22:04 [INFO] templates.auths.auth: Token Data added in memcache.
