@@ -14,6 +14,8 @@ The application is fully Dockerized, supports MongoDB, and implements robust log
 ✅ **Logging for Debugging** using python logging module (file and console logging)    
 ✅ **Integrated with SOA service (SOA_AGENT) for sending welcome letter to user post registration.**   
 ✅ **NGINX as Load Balancer for easy scaling.**
+✅ **APScheduler.** for scheduling alert to the member for Opened or Inprogress tasks.
+
 
 
 ### Tech Stack  
@@ -22,6 +24,7 @@ The application is fully Dockerized, supports MongoDB, and implements robust log
 - **Authentication:** JWT
 - **Containerization:** Docker
 - **Load Balancer**: NGINX
+- **APScheduler**: For scheduling tasks
 
 ### Setup Application
 1. Clone the Repo
@@ -51,6 +54,7 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 
 ### Example (Use nginx port for below request for processing at multiple web server):
 
+### User Template
 **Signup:**
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/248e535f-88dc-4509-9b74-a344b1f76851" />
@@ -69,6 +73,8 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/52fcb2e3-bc5e-4bb1-85f3-d0244541956a" />
 
+### Task Template
+
 **Create Task**
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/9cf4b9b6-2aa9-46c0-aeef-9370521e0b25" />
@@ -80,5 +86,16 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 **Get User Assigned Task**
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/70c18011-f2c4-4b3c-844e-015c5b3fd226" />
+
+
+### Scheduler Template
+
+**Schedule Tasks**
+
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/636d0c52-9643-45a3-b3ac-708fc077432f" />
+
+**Get scheduled Tasks**
+
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/2b0d7f9a-045b-497a-807c-c14e971da18b" />
 
 
