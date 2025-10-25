@@ -13,7 +13,7 @@ The application is fully Dockerized, supports MongoDB, and implements robust log
 ✅ **Dockerized for easy deployment**    
 ✅ **Logging for Debugging** using python logging module (file and console logging)    
 ✅ **Integrated with SOA service (SOA_AGENT) for sending welcome letter to user post registration.**   
-✅ **NGINX as Load Balancer for easy scaling.**
+✅ **NGINX as Load Balancer for easy scaling.**   
 ✅ **APScheduler.** for scheduling alert to the member for Opened or Inprogress tasks.
 
 
