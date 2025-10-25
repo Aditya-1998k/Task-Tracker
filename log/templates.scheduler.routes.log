@@ -1,0 +1,8 @@
+2025-10-25 10:42:01 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 10:53:28 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 10:53:40 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 10:56:17 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 11:00:44 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 11:08:31 [CRITICAL] templates.scheduler.routes: [Scheduler] ❌ Scheduler not started
+2025-10-25 11:18:32 [INFO] templates.scheduler.routes: [Scheduler] ✅ Scheduler is running
+2025-10-25 11:41:24 [INFO] templates.scheduler.routes: [Scheduler] ✅ Scheduler is running

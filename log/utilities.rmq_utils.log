@@ -20,3 +20,6 @@
 2025-10-22 04:36:44 [INFO] utilities.rmq_utils: Message published to queue: welcome
 2025-10-22 04:37:38 [INFO] utilities.rmq_utils: Message published to queue: welcome
 2025-10-22 04:43:59 [INFO] utilities.rmq_utils: Message published to queue: welcome
+2025-10-25 08:40:00 [INFO] utilities.rmq_utils: Message published to queue: alert_user
+2025-10-25 11:18:42 [INFO] utilities.rmq_utils: Message published to queue: alert_user
+2025-10-25 11:41:34 [INFO] utilities.rmq_utils: Message published to queue: alert_user
