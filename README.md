@@ -98,7 +98,7 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/2b0d7f9a-045b-497a-807c-c14e971da18b" />
 
-**On scheduled time publish message to rabbitmq alert_queue for soa worker**
+**On scheduled time publish message to rabbitmq alert_queue for soa service**
 
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/6a8930b6-17bb-4844-b4df-083406d480a9" />
 
