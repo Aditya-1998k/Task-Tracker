@@ -46,8 +46,7 @@ def signup():
     data = request.get_json()
     if not data:
         return jsonify({"message": "No input data provided"}), 400
-    users = add_user(data)
-    return users
+    return add_user(data)
 
 
 @user_blueprint.route('/get_users', methods=['GET'])
