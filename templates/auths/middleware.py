@@ -6,7 +6,13 @@ from utilities.logging_config import get_logger
 
 logger = get_logger(__name__)
 # Route That don't require Auth
-PUBLIC_ENDPOINTS = {"user.login", "user.signup", "welcome", "user.change_password"}
+PUBLIC_ENDPOINTS = {
+    "user.login",
+    "user.signup",
+    "welcome",
+    "user.change_password",
+    "user.forget_user_password"
+}
 
 
 expire_time = os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES")
@@ -20,9 +26,11 @@ def auth_middleware(app):
             return "", 200
         if not AUTH_ENABLED:
             return None
+        logger.critical(f"Skipping auth for public endpoint: {request.endpoint}")
 
         if request.endpoint in PUBLIC_ENDPOINTS:
             return None
+
         token = request.headers.get("Authorization")
         if not token:
             return jsonify({"error": "Token is missing"}), 401

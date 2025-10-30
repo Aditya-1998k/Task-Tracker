@@ -1,9 +1,14 @@
 from flask import Blueprint, request
 from flask import jsonify
-from .user import get_users_session, add_user, get_all_users_data, get_user_data, change_user_password
+from .user import (
+    forget_password, 
+    get_users_session, 
+    add_user, 
+    get_all_users_data, 
+    get_user_data, 
+    change_user_password,
+)
 from templates.auths.auth import role_required
-from utilities.memcached_utils import get_cache
-
 
 user_blueprint = Blueprint('user', __name__)
 
@@ -90,4 +95,17 @@ def change_password():
     old_password = data.get('oldPassword')
     new_password = data.get('newPassword')
     return change_user_password(email, old_password, new_password)
+
+
+@user_blueprint.route('/forget_password', methods=['POST'])
+def forget_user_password():
+    """
+    Payload:
+    {
+        "email": "test@gmail.com"    
+    }
+    """
+    data = request.get_json()
+    email = data.get('email')
+    return forget_password(email)
 
