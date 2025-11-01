@@ -103,4 +103,10 @@ TODO: Setup a service to consume message from welcome queue and send welcome let
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/6a8930b6-17bb-4844-b4df-083406d480a9" />
 
 
+---
 
+## 🧑‍💻 Author
+
+**Aditya Gupta**  
+💼 [LinkedIn](https://www.linkedin.com/in/aditya-1998k)  
+📧 aditya98gupta@gmail.com 
