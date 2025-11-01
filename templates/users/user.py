@@ -2,6 +2,7 @@ import bcrypt
 import random
 import string
 from .model import user_collection
+from ..tasks.model import tasks_collection
 from .model import Users
 from templates.auths.auth import generate_token
 from flask import jsonify
@@ -51,18 +52,27 @@ def add_user(data):
 
 
 def get_all_users_data():
-    result = []
-    users = list(user_collection.find({}))
-    for user in users:
-        result.append(
-            {
-                "username": user.get("username"),
-                "email": user.get("email"),
-                "role": user.get("role"),
-                "status": user.get("status"),
-            }
-        )
-    return result
+    # Group tasks by assigned_to and count them
+    task_counts = {
+        t["_id"]: t["count"]
+        for t in tasks_collection.aggregate([
+            {"$group": {"_id": "$assigned", "count": {"$sum": 1}}}
+        ])
+    }
+    logger.critical(task_counts)
+
+    users = []
+    for user in user_collection.find({}):
+        username = user.get("username")
+        users.append({
+            "username": username,
+            "email": user.get("email"),
+            "role": user.get("role"),
+            "status": user.get("status"),
+            "task_count": task_counts.get(username, 0),
+        })
+
+    return users
 
 
 def get_user_data(email):
